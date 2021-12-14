@@ -21,7 +21,7 @@ const Login = ({ handleClick }) => {
 
           localStorage.setItem("token", token);
 
-          window.location.replace =
+          window.location.href =
             "https://ws-client-frontend.herokuapp.com/dashboard";
         } else {
           //validation
