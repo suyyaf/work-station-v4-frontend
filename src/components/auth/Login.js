@@ -8,6 +8,7 @@ const Login = ({ handleClick }) => {
 
   const onSubmit = () => {
     axios
+      // .post("http://localhost:5000/login", {
       .post("https://ws-api-backend.herokuapp.com/login", {
         username: username,
         email: email,
@@ -20,7 +21,8 @@ const Login = ({ handleClick }) => {
 
           localStorage.setItem("token", token);
 
-          window.location.href = "/dashboard";
+          window.location.replace =
+            "https://ws-client-frontend.herokuapp.com/dashboard";
         } else {
           //validation
           console.log(`err`);

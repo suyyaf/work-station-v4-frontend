@@ -10,6 +10,7 @@ const Signup = ({ handleClick }) => {
 
   const onSubmit = () => {
     axios
+      // .post("http://localhost:5000/signup", {
       .post("https://ws-api-backend.herokuapp.com/signup", {
         username: username,
         email: email,
@@ -21,7 +22,7 @@ const Signup = ({ handleClick }) => {
           const token = res.data.token;
           localStorage.setItem("token", token);
 
-          window.location.href = "/login";
+          window.location.href = "https://ws-client-frontend.herokuapp.com/";
         } else {
           //validation
           console.log(`else`);
