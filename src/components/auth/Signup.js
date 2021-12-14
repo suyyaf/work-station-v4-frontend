@@ -22,7 +22,7 @@ const Signup = ({ handleClick }) => {
           const token = res.data.token;
           localStorage.setItem("token", token);
 
-          window.location.href = "https://ws-client-frontend.herokuapp.com/";
+          window.location.replace = "https://ws-client-frontend.herokuapp.com/";
         } else {
           //validation
           console.log(`else`);
